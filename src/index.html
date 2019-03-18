@@ -4,49 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="index.css">
-  <title>Jozipph's red Zone</title>
+  <title>Jozipph's Zone</title>
 </head>
 <style>
+/* div display */
+.wdisplay{
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "projects ideas to-do "
+  " . . . ";
+}
+/* div display */
 body {
   background: url(http://www.joefitzgibbon.ie/wp-content/uploads/2016/04/pattern.jpg);
 }
-h1 {
+header {
+  grid-area: header;
 	color:black;
 	font-size:50px;
 	font-family:cursive;
 	text-align: center;
 	background-color: rgba(247,247,247,0.7);
 }
-.top-border {
-border-color:purple;
-border-width:5px;
-border-style:solid;
-border-radius:15px;
-padding:10px;
+.headborder {
+  border-color: #500065;
+  border-width:5px;
+  border-style:solid;
+  border-radius:15px;
+  padding:10px;
 }
-.h-border {
-border-color:rgb(65, 65, 65);
-border-width: 3px;
-border-style: solid;
-border-radius:100px;
-background: linear-gradient(10deg, rgba(119, 238, 255, 0.7), rgba(255, 139, 135, 0.7));
-padding:15px;
-margin: 10px;
+.proj-border {
+  grid-area: projects;
+  border-color:rgb(65, 65, 65);
+  border-width: 3px;
+  border-style: solid;
+  border-radius:100px;
+  background: linear-gradient(10deg, rgba(119, 238, 255, 0.7), rgba(255, 139, 135, 0.7));
+  padding:15px;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.idea-border {
+  grid-area: ideas;
+  border-color:rgb(65, 65, 65);
+  border-width: 3px;
+  border-style: solid;
+  border-radius:100px;
+  background: linear-gradient(10deg, rgba(119, 238, 255, 0.7), rgba(255, 139, 135, 0.7));
+  padding:15px;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.todo-border {
+  grid-area: to-do;
+  border-color:rgb(65, 65, 65);
+  border-width: 3px;
+  border-style: solid;
+  border-radius:100px;
+  background: linear-gradient(10deg, rgba(119, 238, 255, 0.7), rgba(255, 139, 135, 0.7));
+  padding:15px;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 </style>
-<body>
-  <h1 class="top-border"><strong>The Jozipph Zone</strong></h1>
-  <hr>
-  <p class="h-border"><strong><em>Project Ideas:</em></strong></p>
-</body>
-  
-  <header>
- <audio controls>
-    <source src="https://s3.amazonaws.com/freecodecamp/screen-reader.mp3" type="audio/mpeg">
-    </audio>
-  </header>
-  
-  <main>
-  </main>
-</section>
+
+<div class="wdisplay">
+  <body>
+    <header class="headborder"><strong>The Jozipph Zone</strong></header>
+    <p class="proj-border"><strong><em>Projects:</em></strong></p>
+    <ul>
+      <li>hi</li>
+      <li>hi</li>
+    </ul>
+    <p class="idea-border"><strong><em>Ideas:</em></strong></p>
+        <ul>
+      <li>hi</li>
+      <li>hi</li>
+    </ul>
+    <p class="todo-border"><strong><em>To-Do:</em></strong></p>
+        <ul>
+      <li>hi</li>
+      <li>hi</li>
+    </ul>
+  </body>
+</div>
 </html>
