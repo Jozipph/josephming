@@ -7,15 +7,6 @@
   <title>Jozipph's Zone</title>
 </head>
 <style>
-/* div display */
-.wdisplay{
-  display: grid;
-  grid-template-areas:
-  "header header header"
-  "projects ideas to-do "
-  " . . . ";
-}
-/* div display */
 body {
   background: url(http://www.joefitzgibbon.ie/wp-content/uploads/2016/04/pattern.jpg);
 }
@@ -34,8 +25,11 @@ header {
   border-radius:15px;
   padding:10px;
 }
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .proj-border {
-  grid-area: projects;
   border-color:rgb(65, 65, 65);
   border-width: 3px;
   border-style: solid;
@@ -44,10 +38,9 @@ header {
   padding:15px;
   margin: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .idea-border {
-  grid-area: ideas;
   border-color:rgb(65, 65, 65);
   border-width: 3px;
   border-style: solid;
@@ -56,10 +49,9 @@ header {
   padding:15px;
   margin: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .todo-border {
-  grid-area: to-do;
   border-color:rgb(65, 65, 65);
   border-width: 3px;
   border-style: solid;
@@ -68,28 +60,48 @@ header {
   padding:15px;
   margin: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+}
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+.lists2 {
+  background-color: white;
+  border-color: green;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
 }
 </style>
 
-<div class="wdisplay">
-  <body>
-    <header class="headborder"><strong>The Jozipph Zone</strong></header>
+  <header class="headborder">
+    <strong>The Jozipph Zone</strong>
+  </header>
+  <nav class="nav"> 
     <p class="proj-border"><strong><em>Projects:</em></strong></p>
+    <p class="idea-border"><strong><em>Ideas:</em></strong></p>
+    <p class="todo-border"><strong><em>To-Do:</em></strong></p>
+  </nav>
+<div class=lists>
+  <fieldset>
     <ul>
       <li>hi</li>
       <li>hi</li>
     </ul>
-    <p class="idea-border"><strong><em>Ideas:</em></strong></p>
-        <ul>
+  </fieldset>
+  <fieldset>
+    <ul>
       <li>hi</li>
       <li>hi</li>
     </ul>
-    <p class="todo-border"><strong><em>To-Do:</em></strong></p>
-        <ul>
+  </fieldset> 
+  <fieldset class="lists2">
+    <ul>
       <li>hi</li>
       <li>hi</li>
     </ul>
-  </body>
+  </fieldset>
 </div>
 </html>
